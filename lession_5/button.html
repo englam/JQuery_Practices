@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="css/base/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+	<script src="jquery-1.8.3.js"></script>
+	<script src="jquery-ui-1.9.2.custom.min.js"></script>
+
+
+
+
+</head>
+<body>
+
+<div id="radio">
+
+Sex : <input type=radio name=sex id=m><label for=m>Male</label></input>
+	  <input type=radio name=sex id=f><label for=f>Female</label></input>
+
+</div>
+</br>
+
+<p>Select the colors that you like: </p>
+
+<div id="checkbox">
+<input type=checkbox name=red id=idred><label for=idred>Red</label></input>
+<input type=checkbox name=green id=idgreen><label for=idgreen>Green</label></input>
+<input type=checkbox name=yellow id=idyellow><label for=idyellow>Yellow</label></input>
+<input type=checkbox name=blue id=idblue><label for=idblue>Blue</label></input>
+</div>
+
+</br>
+</br>
+
+<p>Select the button</p>
+
+<span id = "button1">Button 1</span>
+<span id = "button2">Button 2</span>
+
+</br>
+</br>
+
+<span id = "volume"> Volume </span>
+
+</br>
+</br>
+
+<span id = "volume2"> Volume 2 </span>
+	<script>
+
+	$("input").button();
+	$("div#radio").buttonset();
+	$("div#checkbox").buttonset();
+	$("#button1, #button2").button ();
+
+
+	//$("#volume").button({icons: {secondary : "ui-icon-volume-off"}})
+	$("#volume").button({icons: {secondary : "ui-icon-volume-off"}}).click (function(event)
+		{
+
+			var volume = $(this).button ("option", "icons").secondary == "ui-icon-volume-off" ? false:true;
+			if (volume) $(this).button ("option", "icons" ,{secondary : "ui-icon-volume-off"});
+			else $(this).button ("option", "icons" ,{secondary : "ui-icon-volume-on"});
+
+		}
+
+		)
+
+
+
+	$("#volume2").button({icons: {secondary : "ui-icon-volume-off"}}).click (function(event)
+		{
+
+			var volume2 = $(this).button ("option", "icons").secondary == "ui-icon-volume-off" ? false:true;
+			if (volume2) 
+			{
+				$(this).button ("option", "label", "Volume Off");
+				$(this).button ("option", "icons" ,{secondary : "ui-icon-volume-off"});
+			}
+			else
+			{
+				$(this).button ("option", "label", "Volume On");
+				$(this).button ("option", "icons" ,{secondary : "ui-icon-volume-on"});
+
+			}
+			
+
+		}
+
+		)
+	</script> 
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="css/base/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+	<script src="jquery-1.8.3.js"></script>
+	<script src="jquery-ui-1.9.2.custom.min.js"></script>
+
+
+	<style type=text/css>
+	span.ui-button-text-only{ width:60px;}
+	div.ui-button-text-only{width:230px; height:30px;text-align:right;}
+	div.ui-button-text-only.ie{width:230px;}
+
+	</style>
+
+</head>
+<body>
+
+<div id=result></div>
+<div class=touches>
+	<span>7</span><span>8</span><span>9</span><span>/</span>
+</div>
+<div class=touches>
+	<span>4</span><span>5</span><span>6</span><span>*</span>
+</div>
+<div class=touches>
+	<span>1</span><span>2</span><span>3</span><span>-</span>
+</div>
+<div class=touches>
+	<span>0</span><span>.</span><span>=</span><span>+</span>
+</div>
+
+
+<script>
+
+	var result = 0;		  // result 等於 0
+	var previous_touche; //這邊定義為前一個按鍵的數字
+	var last_operation;  //這邊定義它為前一個運算式
+
+	$("span").button().click  //當按下span的按鍵後
+	(function (event)
+	  {
+
+		var touche = $(this).text();	//定義 touche為 被按的按鍵得到的 text
+		var display = $("#result").text(); //定義display為#result 這個function的text
+		if (touche == "+" || touche == "-"  || touche == "*" || touche == "/" || touche == "=" )  //如果touche是 "+"" or "-" or "*"" or "/"" 這些運算式符號的話
+		  {
+
+		  	if (previous_touche != "+" && previous_touche != "-" && previous_touche != "*" && previous_touche != "/" ) //如果previous_touche 不是 "+" and "-" and "*" and "/" 這些運算式符號的話
+		  		{
+
+				  	if (last_operation =="+")  //如果previous_touche 是 "+" 
+				  		{result += parseFloat(display); //result + diaplay
+				  		$("#result span").text(format_display(result)); //result span顯示 format_display結果, format_display在下面
+				  		}
+
+				  	else if (last_operation =="-") //如果previous_touche 是 "-" 
+				  		{result -= parseFloat(display);
+				  		$("#result span").text(format_display(result));
+				  		}
+
+				  	else if (last_operation =="*") //如果previous_touche 是 "*" 
+				  		{result *= parseFloat(display);
+				  		$("#result span").text(format_display(result));
+				  		}
+
+				  	else if (last_operation =="/") //如果previous_touche 是 "/" 
+				  		{result /= parseFloat(display);
+				  		//$("#result span").text(result);
+				  		$("#result span").text(format_display(result));
+				  		}
+
+				  	result = parseFloat($("#result").text());
+
+			  	}
+
+			  	if (touche == "=") last_operation = undefined; //如果touche是 "=" , 直接定義last_operation 是undefined 
+			  	else last_operation = touche;				   //不然的話last_operation 等於touche
+			  	//document.write (last_operation);
+		  }
+		else
+		  {
+
+		  		//如果按 0 or + or - or * or / 這些符號的話，則不顯示這些符號
+		  		if (display =="0" || previous_touche == "+" || previous_touche == "-" || previous_touche == "*" || previous_touche == "/" || previous_touche == "=")
+		  			display = "";
+		  		//如果顯示的長度小於16的話，它則可以將數字連續加上去， result 則顯示display 的結果
+		  		if (display.length < 16) display += touche;
+		  		$("#result span").text(display);
+
+
+		  }
+
+		  previous_touche = touche;
+
+	  }
+
+	);
+
+	$("div.touches").buttonset();
+
+
+	$("div#result").button().click (function(event)
+		{
+			var display = $("#result").text(); //定義display為#result的text
+			if (display == "0") result = 0;	   //如果display為0 , result =0
+			$("#result span").text("0");		//這邊直接給result span的 text為0
+		}
+		);
+
+	if ($.browser.msie) $("div#result").addClass ("ie");
+
+	function format_display (display)
+	{
+		//document.write (display);
+		display +="";
+		if (display.length < 16) return display;
+		if (display.match (/\./)) return display.substring (0,15);
+		else return ("Out of Memory");
+
+	}
+
+</script> 
+
+</body>
+</html>
