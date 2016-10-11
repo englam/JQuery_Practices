@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="css/base/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+	<script src="jquery-1.8.3.js"></script>
+	<script src="jquery-ui-1.9.2.custom.min.js"></script>
+
+	<style type=text/css> 
+		div#progressbar.ui-progressbar{height: 30px;}
+	</style>
+
+
+</head>
+<body>
+
+
+Progress: <div id="progressbar"></div>
+
+
+
+
+<script>
+
+	$("div#progressbar").progressbar({
+		change : function(event)
+		{
+			var value = $("div#progressbar").progressbar("value");
+			$("#percent").html (value + " %");
+
+		}
+
+	});
+
+	var value =0;
+	var timer = setInterval (function()
+	{
+		$("div#progressbar").progressbar ("value", value);
+		value ++;
+		if (value >1000) clearInterval(timer);
+
+	},100
+
+		)
+	
+
+
+</script>
+
+
+</body>
+</html>

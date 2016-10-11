@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="jquery-ui-1.9.2.custom.css" rel="stylesheet">
+	<script src="jquery-1.8.3.js"></script>
+	<script src="jquery-ui-1.9.2.custom.min.js"></script>
+
+
+	<style type=text/css>
+		div.ui-dialog-titlebar{ font-size : 10px;} 
+		div.ui-dialog-content {font-size : 15px; font-family : georgia; font-style:italic;}
+
+	</style>
+
+</head>
+<body>
+
+<div id="englam" title="Window title">
+	<p>Dialog box Test </p>
+</div>
+
+
+Open Effect
+<select id=effectopen>
+	<option>No Effect</option>
+	<option>blindt</option>
+	<option>bouncet</option>
+	<option>clipt</option>
+	<option>drop</option>
+	<option>fold</option>
+	<option>highlightt</option>
+	<option>puff</option>
+	<option>pulsate</option>
+	<option>scale</option>
+	<option>slide</option>
+
+</select>
+
+</br>
+
+Close Effect
+<select id=effectclose>
+	<option>No Effect</option>
+	<option>blindt</option>
+	<option>bouncet</option>
+	<option>clipt</option>
+	<option>drop</option>
+	<option>fold</option>
+	<option>highlightt</option>
+	<option>puff</option>
+	<option>pulsate</option>
+	<option>scale</option>
+	<option>slide</option>
+
+</select>
+</br>
+<input id=open type=button value =Open>
+<input id=close type=button value =Close>
+
+	<script>
+
+	$("div#englam" ).dialog({autoOpen : false});
+
+	$("#effectopen").change (function(event)
+	{
+		var effect = $(this).val ();
+		if (effect == "No Effect") effect = false;
+		$("div#englam").dialog ("option" , "show" , effect);
+
+
+	})
+
+	$("#effectclose").change (function(event)
+	{
+		var effect = $(this).val ();
+		if (effect == "No Effect") effect = false;
+		$("div#englam").dialog ("option" , "hide" , effect);
+
+
+	})	
+
+
+	$("#open").click (function(event)
+	{
+		$("#englam").dialog("open");
+	}
+
+		)
+
+	$("#close").click (function(event)
+	{
+		$("#englam").dialog("close");
+	}
+
+		)
+
+
+	</script> 
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="css/base/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+	<script src="jquery-1.8.3.js"></script>
+	<script src="jquery-ui-1.9.2.custom.min.js"></script>
+	<script src="development-bundle/ui/i18n/jquery.ui.datepicker-zh-TW.js"> //呼叫 設定日曆語言 ，default 是英文，我把zh-TW用進來就變成中文了</script> 
+
+
+
+</head>
+<body>
+
+
+<h1>Enter the name of book</h1>
+<input id=book />
+
+
+
+
+<script>
+	var books=["Web development with J2EE", "Practice CSS & Javascript", "Practical Ruby on Rails", "Introduction to HTML & CSS","JQuery UI"];
+
+/*
+	$("input#book").autocomplete({
+
+		source:books,
+		open:function(event)
+		{
+			var $ul = $(this).autocomplete("widget");
+			$ul.css ("font-size", "30px");
+		}
+			//類似css的呼叫方法 改變格式
+
+	});
+
+*/
+
+/*
+	$("input#book").autocomplete({
+
+		source:books,
+		minLength:0
+
+		//default 時， 就顯示所有的參數，不需要去輸入東西
+	}).autocomplete("search","");
+*/
+
+/*
+	$("input#book").autocomplete({
+
+		source:books,
+		minLength:0
+
+		//指標過去時,點input，直接將參數顯示出來, 不需要輸入key words
+	}).focus(function(event)
+
+	{
+		$(this).autocomplete("search","");
+	}
+
+	)
+*/
+
+	$("input#book").autocomplete({
+
+		source:books,
+		open: function(event)
+		{
+			var $ul = $(this).autocomplete ("widget");
+			$ul.hide().slideDown(200);
+		}
+
+		//default 時， 就顯示所有的參數，不需要去輸入東西
+	});
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="css/base/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+	<script src="jquery-1.8.3.js"></script>
+	<script src="jquery-ui-1.9.2.custom.min.js"></script>
+	<script src="development-bundle/ui/i18n/jquery.ui.datepicker-zh-TW.js"> //呼叫 設定日曆語言 ，default 是英文，我把zh-TW用進來就變成中文了</script> 
+
+
+
+</head>
+<body>
+
+
+<h1>Enter the name of book</h1>
+<input id=book />
+
+
+
+
+<script>
+	
+
+	$("input#book").autocomplete({
+
+		source:function (request, callback)
+		{
+			var data = {term : request.term};
+			$.ajax
+			({
+				url : "action2.php",
+				data : data,
+				complete : function (xhr, result)
+				{
+
+					if (result !="success") return;
+					var response = xhr.responseText;
+					var books = [];
+
+					$(response).filter ("li").each(function()
+
+					{
+						books.push($(this).text());
+
+					}
+
+					);
+
+					callback(books);
+
+				}
+
+
+
+			});
+
+
+		}
+
+			//呼叫 books函數的方式，不需要我們先定義函數
+
+	});
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

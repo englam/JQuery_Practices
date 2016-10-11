@@ -1,0 +1,252 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"utf",
+				"utf8_encode"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/wamp/www/JQuery/Practice/lession_8/datepicker.html",
+		"/C/wamp/www/JQuery/Practice/lession_10/drag.html",
+		"/C/wamp/www/JQuery/Practice/lesson_9/action2.php",
+		"/C/wamp/www/JQuery/Practice/lesson_9/book_4_ajax_mysql.html",
+		"/C/wamp/www/case_1/member/search.php",
+		"/C/wamp/www/case_1/member/addmember.php",
+		"/C/wamp/www/case_1/member/add_member_mysql.php",
+		"/C/wamp/www/case_1/products/shopping_car.php",
+		"/C/wamp/www/case_1/products/product_index.php",
+		"/C/wamp/www/case_1/products/addproducts.php",
+		"/C/wamp/www/case_1/products/add_to_car.php",
+		"/C/wamp/www/case_1/administration/admin_mysql.php",
+		"/C/wamp/www/JQuery/Practice/lesson_9/book.html",
+		"/C/wamp/www/JQuery/Practice/lesson_9/action.php",
+		"/C/wamp/www/case_1/index.php",
+		"/C/wamp/www/JQuery/Practice/lesson_8/action.php",
+		"/C/wamp/www/JQuery/Practice/lesson_8/datepicker.html",
+		"/C/wamp/www/JQuery/Practice/lesson_7/slider.html",
+		"/C/wamp/www/JQuery/Practice/lesson_7/slider_2.html",
+		"/C/wamp/www/JQuery/Practice/lesson_7/slider_3.html",
+		"/C/wamp/www/JQuery/Practice/lesson_2/dialog_2.html",
+		"/C/wamp/www/JQuery/Practice/lesson_2/dialog_3.html",
+		"/C/wamp/www/JQuery/Practice/lesson_6/progress.html",
+		"/C/wamp/www/JQuery/Practice/lesson_5/button.html",
+		"/C/wamp/www/JQuery/Practice/lesson_5/button_caculator.html",
+		"/C/wamp/www/JQuery/Practice/lession_2/accordion.html",
+		"/C/wamp/www/JQuery/Practice/lession_2/dialog_5.html",
+		"/C/wamp/www/JQuery/Practice/lession_2/tab.html",
+		"/C/wamp/www/JQuery/Practice/lession_2/dialog_3.html",
+		"/C/wamp/www/JQuery/jquery-ui-1.9.2.custom/index.html",
+		"/C/wamp/www/JQuery/Practice/lession_2/dialog_2.html",
+		"/C/wamp/www/JQuery/Practice/lession_2/dialog.html",
+		"/C/wamp/www/JQuery/Javascript.html",
+		"/C/wamp/www/JQuery/Practice/lession_2/dialog_4.html",
+		"/C/wamp/www/cgi/Chapter_7_web/cgi-bin/yate.py",
+		"/C/wamp/www/cgi/hi.py",
+		"/C/wamp/www/cgi/Chapter_7_web/cgi-bin/generate_list.py",
+		"/C/wamp/www/cgi/Chapter_7_web/athletelist.py",
+		"/C/wamp/www/cgi/Chapter_7_web/cgi-bin/athletelist.py",
+		"/C/wamp/www/test/hi.py",
+		"/C/wamp/www/cgi/Chapter_7_web/cgi-bin/generate_timing_data.py",
+		"/C/wamp/www/cgi/Chapter_7_web/cgi-bin/athletemodel.py",
+		"/C/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
+		"/C/wamp/www/JQuery/Practice/lession_2/action.php",
+		"/C/wamp/www/JQuery/Practice/lession_2/test_1_light.html",
+		"/C/wamp/www/JQuery/Practice/lession_2/action_2.php",
+		"/D/Englam/JQuery/Practice/lession_2/test_1.html",
+		"/D/Englam/JQuery/Practice/lession_2/test_1_light.html",
+		"/D/Englam/JQuery/Practice/lession_2/action.php",
+		"/C/wamp/www/test/action.php",
+		"/D/Englam/JQuery/Practice/lession_2/test.html",
+		"/D/Englam/JQuery/jquery-ui-1.9.2.custom/test.html",
+		"/D/Englam/JQuery/examples/JQuery_Tools_Tabs/test.html",
+		"/D/Englam/JQuery/Practice/lession_2/jquery-ui-1.9.2.custom.css",
+		"/D/Englam/JQuery/jquery-ui-1.9.2.custom/index.html",
+		"/D/Englam/python/Download_Pictures/download_all_pictures_1.py",
+		"/D/Englam/python/上課/20160406/20160406/function_01.py",
+		"/D/Englam/python/上課/20160330/01.txt",
+		"/C/Users/englam/Desktop/給黃校長稿",
+		"/D/Englam/python/上課/20160406/20160406/01.txt",
+		"/C/wamp/www/case_1/member/member_index.htm",
+		"/C/wamp/www/case_1/member/join.php",
+		"/C/wamp/www/case_1/englam_note",
+		"/C/wamp/www/case_1/member/join.htm",
+		"/C/wamp/www/case_1/member/checkpwd.php",
+		"/C/Users/englam/Desktop/歌詞.txt",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/D/Englam/python/Download_Pictures/download_pictures_1.py",
+		"/D/Englam/Html/chapter9/lounge/lounge.html",
+		"/C/wamp/www/index.php",
+		"/D/Englam/Html/chapter9/lounge/lounge.css",
+		"/D/Englam/Html/chapter9/lounge-complete/lounge.html",
+		"/D/Englam/Html/chapter8/journal/journal.css",
+		"/D/Englam/Html/chapter8/journal/journal.html",
+		"/D/Englam/Html/chapter6/lounge-complete.html"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"last_operation",
+			"result",
+			"tohches",
+			"icons",
+			"icon",
+			"html",
+			"panel",
+			"tabs",
+			"css"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "book.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

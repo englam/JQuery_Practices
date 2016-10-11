@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="css/base/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+	<script src="jquery-1.8.3.js"></script>
+	<script src="jquery-ui-1.9.2.custom.min.js"></script>
+
+	<style type=text/css> 
+		div#slider.ui-slider{width: 200px; background: black;} 
+		/*div#slider.ui-slider{height: 80px; background: black;}*/
+	</style>
+
+
+</head>
+<body>
+
+
+<h3>Slider : </h3>
+<div id="slider"></div></body></br>
+Start : <span id="valuestart"></span></br>
+Stop : <span id="valuestop"></span></br>
+Change : <span id="valuechange"></span></br>
+Slide : <span id="valueslide"></span></br>
+
+<script>
+	//$("div#slider").slider();
+	//$("div#slider").slider({orientation :"vertical"});
+	//$("div#slider").slider({animate :"true"});
+	//$("div#slider").slider({value: "50"});
+	$("div#slider").slider({
+		animate: true,
+		range: true,
+		values: [10 , 20 ],
+		start : function (event)
+		{
+			var values = $("div#slider").slider("values");
+			$("#valuestart").html(values[0] + " , " + values[1]);
+		},
+		stop : function (event)
+		{
+			var values = $("div#slider").slider("values");
+			$("#valuestop").html(values[0] + " , " + values[1]);
+		},
+		change : function (event)
+		{
+			var values = $("div#slider").slider("values");
+			$("#valuechange").html(values[0] + " , " + values[1]);
+		},
+		slide : function (event)
+		{
+			var values = $("div#slider").slider("values");
+			$("#valueslide").html(values[0] + " , " + values[1]);
+		},
+
+
+	});
+
+
+</script>
+
+
+</body>
+</html>

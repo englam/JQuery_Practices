@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="jquery-ui-1.9.2.custom.css" rel="stylesheet">
+	<script src="jquery-1.8.3.js"></script>
+	<script src="jquery-ui-1.9.2.custom.js"></script>
+
+
+	<style type=text/css>
+		li.ui-state-default {
+		  font-size : 10px;
+		}
+		div.ui-tabs-panel{
+			font-size : 15px;
+			font-family : georgia;
+			font-style : italic;
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+<form method='post' action='change.php'>
+
+<div id="according" >
+
+	<h1>7-11</h1>
+	<div>Test 1
+	<input type="text" value="111" name="product_size"></input>
+
+
+	</div>
+
+	<h1>Family</h1>
+	<div>Test 2  <input type="text" name="product_id" size="10"></div>
+
+
+
+	<h1>Test3</h1>	
+	<div>Test 3</div>
+</div>
+
+<input type="submit" value="新增商品">
+</form>
+
+	<script>
+
+		$( "#according" ).accordion();
+
+
+	</script> 
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="jquery-ui-1.9.2.custom.css" rel="stylesheet">
+	<script src="jquery-1.8.3.js"></script>
+	<script src="jquery-ui-1.9.2.custom.js"></script>
+
+
+	<style type=text/css>
+		li.ui-state-default {
+		  font-size : 10px;
+		}
+		div.ui-tabs-panel{
+			font-size : 15px;
+			font-family : georgia;
+			font-style : italic;
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+
+<div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+
+		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
+			<a href="#tabs-1">First</a>
+		</li>
+
+		<li class="ui-state-default ui-corner-top">
+			<a href="#tabs-2">Second</a>
+		</li>
+
+		<li class="ui-state-default ui-corner-top">
+			<a href="#tabs-3">Third</a>
+		</li>
+
+		<li class="ui-state-default ui-corner-top">
+			<a href="action.php">5</a>
+		</li>		
+
+	</ul>
+	<div id="tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom">testa.</div>
+
+	<div id="tabs-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">testb.</div>
+
+	<div id="tabs-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">testc.</div>
+</div>
+
+	<script>
+
+		//$( "#tabs" ).tabs();
+		//$( "#tabs" ).tabs({collapsible:false}).tabs({active:1});
+		//$( "#tabs" ).tabs({event:"mouseover"});
+		//$( "#tabs" ).tabs({active:1});
+		//$( "#tabs" ).tabs({collapsible:false}).tabs({select:1}).tabs("disable", 2);
+		//$( "#tabs" ).tabs({disable:"1"});
+		//$( "#tabs" ).tabs({select:0}).tabs("disable", 0);
+		//$( "#tabs" ).tabs({fx : {opacity: "toggle"},}).tabs("add", "#tab4", "Tab 4"); 
+		//$( "#tabs" ).tabs({fx : {opacity: "toggle"},});
+		//$("<i>forth</i>").appendTo ("#tab4"); 
+		//$( "#tabs" ).tabs({fx : {opacity: "toggle"},}).tabs ("url", 1 , "action.php").tabs("load", 1);
+		//$( "#tabs" ).tabs({collapsible:false}).tabs({active:1}).tabs({fx : {opacity: "toggle"},ajaxOptions : {data:{name : "englam", surname : "englam test"}}}).tabs ("url", 2 , "action_2.php").tabs("load", 2);
+		$( "#tabs" ).tabs({fx : {opacity: "toggle"},add : function (event,tab){$(tab.panel).load("action_2.php");}}).tabs("add", "#tab6", "Tab 6");
+
+	</script> 
+
+</body>
+</html>

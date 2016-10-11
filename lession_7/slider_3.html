@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="css/base/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+	<script src="jquery-1.8.3.js"></script>
+	<script src="jquery-ui-1.9.2.custom.min.js"></script>
+
+	<style type=text/css> 
+		div#slider.ui-slider{width: 200px; background: black;} 
+		/*div#slider.ui-slider{height: 80px; background: black;}*/
+	</style>
+
+
+</head>
+<body>
+
+
+<img src="test.jpg" alt="Smiley face" height="350" width="350">
+<div id="slider"></div></body></br>
+
+
+<script>
+	//$("div#slider").slider();
+	//$("div#slider").slider({orientation :"vertical"});
+	//$("div#slider").slider({animate :"true"});
+	//$("div#slider").slider({value: "50"});
+	$("div#slider").slider({
+		animate: true,
+
+		slide : function(event)
+		{
+			var value = $("div#slider").slider("value");
+			var opacity_2 = value /100;
+			$("img").css ({opacity : opacity_2});
+
+		}
+
+
+	}).slider("value",100);
+
+
+</script>
+
+
+</body>
+</html>

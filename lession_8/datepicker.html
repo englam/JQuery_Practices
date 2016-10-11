@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="css/base/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+	<script src="jquery-1.8.3.js"></script>
+	<script src="jquery-ui-1.9.2.custom.min.js"></script>
+	<script src="development-bundle/ui/i18n/jquery.ui.datepicker-zh-TW.js"> //呼叫 設定日曆語言 ，default 是英文，我把zh-TW用進來就變成中文了</script> 
+
+	<style type=text/css> 
+		div.ui-datepicker-header{
+			font-size : 15px;
+			font-family: georgia;
+		}
+
+		table.ui-datepicker-calendar{
+			font-size : 15px;
+			font-family: georgia;
+			font-style: italic;
+
+		}
+	</style>
+
+
+</head>
+<body>
+
+
+<h1>Click to select a date</h1>
+<input id=date />
+<div id=datereturn></div>
+
+<!--
+<div id=date> </div>
+<span id=date> </span>
+-->
+
+<script>
+
+	//$("input#date").datepicker();
+
+$("input#date").datepicker( {
+        changeMonth: true,
+        changeYear: true,
+        showButtonPanel: true,
+        dateFormat: 'MM yy',
+        onClose: function(dateText, inst) { 
+            var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+            var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+            $(this).datepicker('setDate', new Date(year, month, 1));
+        }
+	//$("div#date").datepicker();
+	//$("span#date").datepicker();
+	//$("input#date").datepicker({numberOfMonths:[1,2],"showAnim" : "drop"});
+	//$("input#date").datepicker({"showAnim" : "drop"});
+	//$("input#date").datepicker({"showOtherMonths" : true});
+	//$("input#date").datepicker({"minDate" : -3, "maxDate" : "1w"});
+
+/*
+	$("input#date").datepicker({
+		beforeShowDay: function(date)
+		{
+
+			var dayOfweek = date.getDay();
+			if (dayOfweek ==0 || dayOfweek ==6) return [false]; //0 = 星期日   , 6 = 星期六
+			else return[true];
+		}
+
+
+	});
+*/
+
+	//$("input#date").datepicker().datepicker("setDate" , "10");
+	//$("input#date").datepicker({dateFormat : "dd/mm/yy"}).datepicker("setDate" , "10");
+	//$("input#date").datepicker({"defaultDate" : "1"});
+
+/*
+	  $("input#date").datepicker({onSelect :function(dateText3)
+	  	{
+	  		var data = {data1 : dateText3};
+	  		$.ajax({
+
+	  			url : "action.php",
+	  			data : data,
+	  			complete : function (xhr, result)
+	  			{
+
+	  				if (result != "success") return;
+	  				var response = xhr.responseText;
+	  				$("#datereturn").html(response);
+	  			}
+
+	  		});
+
+	  	}
+
+	  });
+	  */
+
+</script>
+
+
+</body>
+</html>

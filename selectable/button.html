@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="css/base/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+	<script src="jquery-1.8.3.js"></script>
+	<script src="jquery-ui-1.9.2.custom.min.js"></script>
+
+
+
+
+</head>
+<body>
+
+<form action="test.php">
+Select Tag:<br/>
+<select id="sel" name="select">
+  <option value="0">請選擇</option>
+  <option value="1">國家</option>
+  <option value="2">地區</option>
+</select>
+<br/>
+被連動的Select Tag:<br/>
+<select id="sel2" name="select2"></select><br>
+<select id="sel3" name="select3"></select><br>
+<input type='submit' name="send" />
+</form>
+
+
+
+<script>
+$("#sel").change(function(){
+  switch (parseInt($(this).val())){
+
+        case 0: 
+      $("#sel2 option").remove();
+      break;
+        case 1: 
+      $("#sel2 option").remove();
+      var arrai = ["a1","t1","c1","e1","f1"];
+      var array = [ "美國", "台灣", "中國", "英國", "法國" ];
+      //利用each遍歷array中的值並將每個值新增到Select中
+      $.each(array, function(i, val) {
+        $("#sel2").append($("<option value='" + arrai[i] + "'>" + array[i] + "</option>"));
+
+      });
+        $("#sel3").append($("<option value='111'>111</option>"));      
+      break;
+        case 2: 
+      $("#sel2 option").remove();
+      var arrai = ["e1","c1","a1","d1","n1","s1","l1"];
+      var array = [ "歐洲", "亞洲", "非洲", "大洋洲", "南美洲", "北美洲", "南極洲" ];
+      //利用each遍歷array中的值並將每個值新增到Select中
+      $.each(array, function(i, val) {
+        $("#sel2").append($("<option value='" + arrai[i] + "'>" + array[i] + "</option>"));
+      });     
+        $("#sel3").append($("<option value='222'>222</option>"));   
+      break;
+    }
+});
+
+</script>
+
+</body>
+</html>

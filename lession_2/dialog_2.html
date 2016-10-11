@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="jquery-ui-1.9.2.custom.css" rel="stylesheet">
+	<script src="jquery-1.8.3.js"></script>
+	<script src="jquery-ui-1.9.2.custom.min.js"></script>
+
+
+	<style type=text/css>
+		div.ui-dialog-titlebar{ font-size : 10px;} 
+		div.ui-dialog-content {font-size : 15px; font-family : georgia; font-style:italic;}
+
+	</style>
+
+</head>
+<body>
+
+<div id="englam" title="Window title">
+	<p>Dialog box Test </p>
+</div>
+
+<input id=open type=button value=Open>
+<input id=close type=button value=Close>
+
+
+	<script>
+
+		//$("div#englam" ).dialog({autoOpen:false});
+		//$("div#englam" ).dialog({show:"slide" , hide: "puff"});
+		//$("div#englam" ).dialog({autoOpen:false,show:"slide" , hide: "puff"});
+		$("div#englam" ).dialog()
+
+		$("#open").click (function (event)
+		{
+
+			if ($("#englam").dialog("isOpen")) alert ("Dialog Already Open");
+			else $("#englam").dialog ("open");
+			
+		});
+
+
+		$("#close").click (function (event)
+		{
+
+			if (!$("#englam").dialog("isOpen")) alert ("Dialog Already Close");
+			else $("#englam").dialog ("close");
+			
+		});
+
+	</script> 
+
+</body>
+</html>
